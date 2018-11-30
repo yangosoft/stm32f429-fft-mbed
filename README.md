@@ -4,6 +4,22 @@
 
 FFT on audio captured by a mic and displayed on the LCD.
 
-For FFT it uses  KissFFT https://github.com/mborgerding/kissfft
+For FFT it uses  [KissFFT](https://github.com/mborgerding/kissfft)
 
-This is a STM32F429I-DISC1 project using PlatformIO and mbed.
+This is a STM32F429I-DISC1 project using [mbed](https://os.mbed.com/docs/v5.10/tutorials/quick-start-offline.html).
+
+
+## Build instructions
+
+Download [ARM toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads). Please note: Ubuntu 18.04.01 has a broken ARM toolchain.
+
+Set GCC_ARM in mbed_settings.py
+
+```
+sudo apt install mercurial
+mbed add http://os.mbed.com/teams/ST/code/TS_DISCO_F429ZI/
+mbed add http://os.mbed.com/teams/ST/code/LCD_DISCO_F429ZI/
+mbed add http://os.mbed.com/teams/ST/code/BSP_DISCO_F429ZI/
+```
+
+Edited ``debug.json``, ``develop.json`` and ``release.json`` in order to add ``std=c++14`` flags.
