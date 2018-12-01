@@ -4,6 +4,8 @@
 
 FFT on audio captured by a mic and displayed on the LCD.
 
-For FFT it uses  KissFFT https://github.com/mborgerding/kissfft
+For it uses [KissFFT](https://github.com/mborgerding/kissfft)
 
 This is a STM32F429I-DISC1 project using PlatformIO and mbed.
+
+Checkout branch ``feature/mbed-only`` for a non-dependent PlatformIO build.
